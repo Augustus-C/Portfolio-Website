@@ -1,0 +1,227 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body, html {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  background: #f4f4f4;
+}
+
+header {
+  width: 100%;
+  height: 80px;
+  background-color: #343a40;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  padding: 0;
+}
+
+nav ul li {
+  margin-left: 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+}
+
+main {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.entry {
+  background-color: #000;
+  color: #fff;
+  border: 2px solid #fff;
+  margin: 40px 0;
+  padding: 40px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 6px 8px rgba(0,0,0,0.3);
+  max-width: 960px;
+  width: 90%;
+}
+
+.entry img.logo {
+  width: 120px;
+  height: auto;
+  object-fit: contain;
+  margin-right: 30px; /* Reduced right margin for balance */
+}
+
+.entry .content-box {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 50px; /* Increased padding to push text to the right */
+}
+
+.entry h2, .entry p, .entry ul {
+  margin: 10px 0;
+  text-align: left;
+}
+
+footer {
+  width: 100%;
+  padding: 20px 10px;
+  text-align: center;
+  background-color: #f8f9fa;
+  color: #212529;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+@media screen and (max-width: 768px) {
+  .entry {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .entry img.logo {
+    width: 100px;
+    margin-bottom: 20px;
+  }
+
+  .entry .content-box {
+    padding: 20px;
+  }
+}
+/* Splash screen */
+.intro {
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #161616;
+  transition: top 1s ease, opacity 1s ease;
+  opacity: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-header {
+  color: #ffffff;
+  font-size: 4em; /* Adjust the logo size as needed */
+}
+
+.logo {
+  display: inline-block;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.logo.active {
+  opacity: 1;
+  transform: translateY(0); /* Reset any movement */
+}
+
+.logo.fade {
+  opacity: 0;
+  transform: translateY(20px); /* Move down slightly when fading out */
+}
+.static-logo {
+  width: 300px;
+  height: auto;
+  object-fit: contain;
+}
+
+.main-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 100px 20px; /* Adjust as needed for spacing */
+  gap: 100px; /* Increase the gap between text and image */
+}
+
+.text-section {
+  max-width: 600px; /* Set a max-width for text if necessary */
+}
+
+.main-header {
+  font-size: 5em; /* Large text for the header */
+  color: #fff; /* White color text */
+  text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000; /* Simulating text border for better cross-browser compatibility */
+  margin-bottom: 30px; /* More space below header */
+}
+
+.main-subtext {
+  font-size: 1.5em; /* Subtitle text size */
+  color: #000; /* Black color text */
+  margin-bottom: 30px; /* Space below subtitle text */
+}
+
+.portfolio-button {
+  font-size: 1em;
+  background-color: #000; /* Button background color */
+  color: #fff; /* Button text color */
+  text-decoration: none;
+  padding: 15px 30px; /* Larger padding for bigger button */
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  display: inline-block; /* Needed for the transform property to work */
+  margin-bottom: 50px; /* More space below button */
+}
+
+.portfolio-button:hover {
+  background-color: #555; /* Color change on hover */
+}
+
+
+@media screen and (max-width: 768px) {
+  
+  .main-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 50px; /* Adjust gap for smaller screens */
+  }
+
+}
+
+footer {
+  width: 100%;
+  padding: 40px 10px; /* Increased padding to accommodate the tree image */
+  text-align: center;
+  background-color: #f8f9fa;
+  color: #212529;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 1000;
+}
+
